@@ -180,7 +180,7 @@ module Dry
   #
   #   module Types
   #     # imports all types as constants, uses modules for namespaces
-  #     include Dry::Types()
+  #     include Dry.Types()
   #   end
   #   # strict types are exported by default
   #   Types::Integer
@@ -191,7 +191,7 @@ module Dry
   # @example changing default types
   #
   #   module Types
-  #     include Dry::Types(default: :nominal)
+  #     include Dry.Types(default: :nominal)
   #   end
   #   Types::Integer
   #   # => #<Dry::Types[Nominal<Integer>]>
@@ -199,7 +199,7 @@ module Dry
   # @example cherry-picking namespaces
   #
   #   module Types
-  #     include Dry::Types(:strict, :coercible)
+  #     include Dry.Types(:strict, :coercible)
   #   end
   #   # cherry-picking discards default types,
   #   # provide the :default option along with the list of
@@ -208,7 +208,7 @@ module Dry
   #
   # @example custom names
   #   module Types
-  #     include Dry::Types(coercible: :Kernel)
+  #     include Dry.Types(coercible: :Kernel)
   #   end
   #   Types::Kernel::Integer
   #   # => #<Dry::Types[Constructor<Nominal<Integer> fn=Kernel.Integer>]>
